@@ -42,6 +42,9 @@ namespace Connect4
             }
             else
             {
+                // Disable text box now that user has entered his data
+                UserInputTextBox.Enabled = false;
+
                 if (QuestionLabel.Text.Contains("Red"))
                 {
                     Board.SetRedName(UserInputTextBox.Text);
@@ -51,6 +54,23 @@ namespace Connect4
                     Board.SetYellowName(UserInputTextBox.Text);
                 }
                 Dispose();
+            }
+        }
+
+        private void UserInput_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (UserInputTextBox.Enabled)
+            {
+                // User is attempting to close this window without having input
+
+                DialogResult Result = MessageBox.Show("You must enter a name, otherwise you will not be able to play and the application will exist. Are you sure you want to close?", "Must Enter a Name", MessageBoxButtons.YesNo);
+
+                if (Result == DialogResult.Yes)
+                {
+                    // User insists on not entering a name, exit the entire application
+                    Application.Exit();
+                }
+
             }
         }
     }

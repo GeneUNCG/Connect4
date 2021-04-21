@@ -76,6 +76,7 @@
             this.MinimizeBox = false;
             this.Name = "UserInput";
             this.Text = "UserInput";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserInput_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
