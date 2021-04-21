@@ -7,6 +7,8 @@ namespace Connect4
     {
         private readonly Board Board;
 
+        private bool Closing;
+
         public UserInput(string Prompt, Board Board)
         {
             InitializeComponent();
@@ -59,7 +61,7 @@ namespace Connect4
 
         private void UserInput_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (UserInputTextBox.Enabled)
+            if (UserInputTextBox.Enabled && !Closing)
             {
                 // User is attempting to close this window without having input
 
@@ -68,6 +70,7 @@ namespace Connect4
                 if (Result == DialogResult.Yes)
                 {
                     // User insists on not entering a name, exit the entire application
+                    Closing = true;
                     Application.Exit();
                 }
 
