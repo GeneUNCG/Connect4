@@ -96,6 +96,10 @@ namespace Connect4
             // Send players a system message showing who won
             MessageBox.Show("Congratualations " + Winner + "! You won the game.", "Game Finished");
 
+            // Update current player label text and center it
+            CurrentPlayerLabel.Text = Winner + " won the game!";
+            CurrentPlayerLabel.Location = new Point((Width - CurrentPlayerLabel.Width) / 2, CurrentPlayerLabel.Location.Y);
+
             // Disable buttons
             btn_col1.Enabled = false;
             btn_col2.Enabled = false;

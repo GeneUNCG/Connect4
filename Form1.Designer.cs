@@ -138,14 +138,14 @@
             // NewGameMenuItem
             // 
             this.NewGameMenuItem.Name = "NewGameMenuItem";
-            this.NewGameMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.NewGameMenuItem.Size = new System.Drawing.Size(132, 22);
             this.NewGameMenuItem.Text = "New Game";
             this.NewGameMenuItem.Click += new System.EventHandler(this.NewGameMenuItem_Click);
             // 
             // QuitGameMenuItem
             // 
             this.QuitGameMenuItem.Name = "QuitGameMenuItem";
-            this.QuitGameMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.QuitGameMenuItem.Size = new System.Drawing.Size(132, 22);
             this.QuitGameMenuItem.Text = "Quit Game";
             this.QuitGameMenuItem.Click += new System.EventHandler(this.QuitGameMenuItem_Click);
             // 
@@ -168,7 +168,7 @@
             // 
             this.CurrentPlayerLabel.AutoSize = true;
             this.CurrentPlayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentPlayerLabel.Location = new System.Drawing.Point(267, 689);
+            this.CurrentPlayerLabel.Location = new System.Drawing.Point(267, 675);
             this.CurrentPlayerLabel.Name = "CurrentPlayerLabel";
             this.CurrentPlayerLabel.Size = new System.Drawing.Size(273, 25);
             this.CurrentPlayerLabel.TabIndex = 8;
